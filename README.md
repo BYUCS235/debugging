@@ -64,6 +64,7 @@ Program received signal SIGFPE, Arithmetic exception.
 (gdb) 
   ```
 5. You can see that the bug is on line 14.  This gdb command will help you find most of your problems.  Lets remove this error by commenting out the errant line of code so we can find the next bug.  You will have to enter "quit" to exit gdb.
+
   ```
 // int average = sum / count;
   ```
@@ -78,6 +79,7 @@ Program received signal SIGSEGV, Segmentation fault.
 (gdb) 
   ```
 7. Remove this bug by commenting out the errant line and lets see if we can find the next one.
+
   ```
 // *nowhere = 5;
   ```
