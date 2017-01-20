@@ -26,12 +26,14 @@ main()
 }
   ```
 2. Next you will need to compile your program with the "-g" flag.  Lets create an entry in your Makefile for the pinewood example for debug.cpp.
+
   ```
 CFLAGS=-std=c++11 -g
 debug: debug.cpp
 	g++ $(CFLAGS) debug.cpp -o debug
   ```
 3. Type "make debug" and the compiler should create an executable called "debug".  When you run this executable with "./debug", you should see "Floating point exception".  Your program has tried to divide by zero, since "count=0".  Lets use the debugger to find the location of this error.
+
   ```
 mjcleme:~/workspace/V2 $ gdb debug
 GNU gdb (Ubuntu 7.7.1-0ubuntu5~14.04.2) 7.7.1
