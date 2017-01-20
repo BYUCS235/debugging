@@ -30,7 +30,7 @@ main()
   ```
 CFLAGS=-std=c++11 -g
 debug: debug.cpp
-	g++ $(CFLAGS) debug.cpp -o debug
+		g++ $(CFLAGS) debug.cpp -o debug
   ```
 3. Type "make debug" and the compiler should create an executable called "debug".  When you run this executable with "./debug", you should see "Floating point exception".  Your program has tried to divide by zero, since "count=0".  Lets use the debugger to find the location of this error.
 
