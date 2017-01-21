@@ -2,7 +2,7 @@
 Although using cout to check the status of your program will work a lot of the time, there will be times when you will need more help.  When this occurs, you will need to use a debugger.  Although there are different debuggers for each development environment, they all have about the same features.  The debugger that it available for the c9.io environment is "gdb".  Lets experiment with using gdb to find common errors.
 
 1. First create a file that we can debug, call it "debug.cpp"
-  ```
+  ```c++
 #include <iostream>
 using namespace std;
 
