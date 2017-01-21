@@ -3,27 +3,27 @@ Although using cout to check the status of your program will work a lot of the t
 
 1. First create a file that we can debug, call it "debug.cpp"
   ```c++
-#include <iostream>
-using namespace std;
+	#include <iostream>
+	using namespace std;
 
-void bad(char *smallarray)
-{
-	for(int i = 0; i < 1000; i++) {
-		smallarray[i] = 0;
+	void bad(char *smallarray)
+	{
+		for(int i = 0; i < 1000; i++) {
+			smallarray[i] = 0;
+		}
 	}
-}
-main()
-{
-	int sum = 5;
-	int count = 0;
-	int average = sum / count;
+	main()
+	{
+		int sum = 5;
+		int count = 0;
+		int average = sum / count;
     
-	char *nowhere = 0;
-	*nowhere = 5;
+		char *nowhere = 0;
+		*nowhere = 5;
     
-	char small[2];
-	bad(small);
-}
+		char small[2];
+		bad(small);
+	}
   ```
 2. Next you will need to compile your program with the "-g" flag.  Lets create an entry in your Makefile for the pinewood example for debug.cpp.
 
